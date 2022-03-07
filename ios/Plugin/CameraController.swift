@@ -145,7 +145,7 @@ extension CameraController {
             }
 
             DispatchQueue.main.async {
-                self.updateVideoOrientation()
+                // self.updateVideoOrientation()
 
                 completionHandler(nil)
             }

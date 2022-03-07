@@ -109,6 +109,9 @@ public class CameraPreview: CAPPlugin {
                         if (self.rotateWhenOrientationChanged == true) {
                             NotificationCenter.default.addObserver(self, selector: #selector(CameraPreview.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
                         }
+
+                        // fix: error start orientation landscape
+                        self.cameraController.updateVideoOrientation()
                         
                         call.resolve()
 
